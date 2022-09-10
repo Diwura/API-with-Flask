@@ -5,3 +5,4 @@ flask_jwt
 python-decouple
 uwsgi
 gunicorn
+itsdangerous<=2.0.0
