@@ -13,14 +13,15 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['PROPAGATE_EXCEPTIONS'] = True
-app.secret_key = 'goatmind199009ggd' #config('secret')
+app.secret_key ='jdfsduyfdsuyfdsufusdfuoidsufi' #config('secret')
 api = Api(app)
 
 
 
 
-
 jwt = JWT(app, authenticate, identity)  # /auth
+
+
 
 api.add_resource(Store, '/store/<string:name>')
 api.add_resource(StoreList, '/stores')
@@ -28,5 +29,10 @@ api.add_resource(Item, '/item/<string:name>')
 api.add_resource(ItemList, '/items')
 api.add_resource(UserRegister, '/register')
 
+
+from db import db
+db.init_app(app)
+
 if __name__ == '__main__':
+    
     app.run(port=5151, debug=True)
