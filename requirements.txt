@@ -1,8 +1,6 @@
-Flask-JWT-Extended
+Flask
 Flask-RESTful
+Flask-JWT
 Flask-SQLAlchemy
-flask_jwt
-python-decouple
 uwsgi
-gunicorn
-itsdangerous<=2.0.0
+psycopg2
